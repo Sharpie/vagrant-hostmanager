@@ -95,7 +95,7 @@ module VagrantPlugins
           host = machine.config.vm.hostname || machine.name
           aliases = machine.config.hostmanager.aliases
           if ip != nil
-            "#{ip}\t#{host}\n" + aliases.map{|a| "#{ip}\t#{a}"}.join("\n") + "\n"
+            "#{ip} #{host} #{aliases.join(' ')}\n"
           end
         end
 
